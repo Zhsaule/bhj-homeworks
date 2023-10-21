@@ -25,6 +25,18 @@ class Game {
       При неправильном вводе символа - this.fail();
       DOM-элемент текущего символа находится в свойстве this.currentSymbol.
      */
+    document.addEventListener('keyup', (event) => {
+      const pressedKey = event.key.toLowerCase(); // Получаем символ с клавиатуры в нижнем регистре
+      console.log(event.key.toLowerCase());
+
+      if (pressedKey == 'shift') {
+        console.log(event.shiftKey); //Пропускаем Shift
+      } else if (pressedKey === this.currentSymbol.textContent.toLowerCase()) {
+        this.success();
+      } else {
+        this.fail();
+      }
+    });
   }
 
   success() {
