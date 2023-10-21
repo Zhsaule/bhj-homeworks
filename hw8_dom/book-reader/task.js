@@ -128,7 +128,7 @@ grayBg.addEventListener('click', function(event) {
     bookElement.classList.remove('book_bg-white');
 });
 
-whitesmokeText.addEventListener('click', function(event) {
+whiteBg.addEventListener('click', function(event) {
     event.preventDefault();
     // Удаляем класс активного элемента управления цветом фона
     blackBg.classList.remove('color_active');
@@ -140,5 +140,4 @@ whitesmokeText.addEventListener('click', function(event) {
     // Удаляем класс цвета фона к элементу книги
     bookElement.classList.remove('book_bg-gray');
     bookElement.classList.remove('book_bg-black');
-
 });
